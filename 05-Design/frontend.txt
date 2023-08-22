@@ -1,0 +1,261 @@
+Typography - making text beutiful and easy to read
+
+serif vs sans-serif : serif - tails at end of words(good for long text and conveys trustworthiness)
+		      sans-serif - Serif but no tails(modern look,clean and simple)
+
+Rules : 
+1. Use good and popular typefaces and play it safe.
+Ex : Sans Serif popular type faces --> Inter,Open sans,Roboto,monotserrat,Work sans,Lato.
+     Serif --> Merriweather,Aleo,playfair display,cormorant,cardo,lora.
+
+2. Its okay to use just one typeface per page ! if you wan tmore limit to 2.
+
+3. Choose right type face according to your website personality.
+	Steps: Choose b/w serif / sans-serif --> experiment b/w its typefaces.
+
+4. When choosing font-sizes , limit choices ! Use a "type scale" tool or other pre-defines range.
+	Normal Text --> 16 to 32 px ;
+	Long Text (like blog post)--> 20px or more
+	Headlines --> 50px + and bold ( 600+)
+Note : dont go below 400 font weight as it is regular one.
+
+5. Create good reading experience.
+	a. Use less than 75 characters per line.
+	b. For normal text , use line height between 1.5 and 2 . for big text go below 1.5.
+	c. decrease letter spacing in headlines.
+	d. Experiment with all caps for short titles. ( make small , bold and decrease letter-spacing)
+	e. Usually, Don't justify text.
+	f. Don't center long text blocks , small blocks are fine.
+
+6. Choose the right color:
+	a. make main color match your website's personality(colors convey meaning)
+
+red -- Attention,power,passion,exitement.
+orange -- less aggressive,happiness,cheerfulness,creativity.
+yellow -- joy,brightness,intelligence.
+greens -- harmony,nature,growth and health.
+blue -- peace , trustworthiness,professionalism.
+purple -- wealth,wisdom,magic.
+pink -- romance,care,affection.
+brown -- nature,durability,comfort.
+black -- power,elegance,minimalism but also grief and sorrow.
+
+b. Use good color tone! Don't use random tone or css named colors.(use toolbox like jonas.io , talwing ,flat ui)
+
+c. You need atleast two types of colors in your color pallete : main and grey colour.
+
+d. With more experience ,you can add more collors : accent colors (Use a tool).
+
+e. For diversity, create lighter and darker "versions" (tints and shades).
+
+When and how to use colors :
+
+f. use main color to draw attention to the most imp. elements onn page (say buy now button).
+
+g. Use colors to add interesting accents or make entire components or sections stand out.
+
+h. You can try to use your color strategically in images and illustrations.
+
+i. On dark coloured bg, use tint(light shade) of bg for text.
+
+j. Text not to be completely black. light it up if it looks heavy and uninvited.
+
+k. Don't make text too tight! Use a too to check contrast b/w text and bg colors. 
+Use "Coolors" to check contrast ratio(at least) --> 4.5 : 1 for normal text & 3:1 for large text(18px +).
+
+7. Use good images:
+
+a. diff types of imgs : product photoes,story telling photoes, illustrations, patterns.
+
+b. Use imgs to support ur msg and story. So only use relevent imgs!
+
+c. Prefre original imgs.If not possible , use original looking stock imgs(not generic ones!)
+Toolbox --> Unsplash(Best!) , pexels ,drawkit ,undraw.
+
+d. Try to use real people to trigger user's emotion.
+
+e. if necessary,crop imgs to fit ur msg.
+
+f. Experiment combining photos, illustrations and patterns.
+
+Handling text on images:
+
+g. Darker or brithen image (completely or partially,using a gradient).
+
+h. Or position text into neutral image area.
+
+i. Or put text in a box.
+
+technical details:
+
+j. to account for high res screens , make img dimensions 2 times as big as their displayed size.
+
+k. coompress imgs for lower file size and better performance.(tool --> squoosh).
+
+l. When using mul. imgs side by side , make sure they have same dimensions.
+
+8.Use good icons:
+
+a. Use good icon pack (free - phosphor icons , ionicons , icons8)
+
+b. use only one icon pack , never mix two.
+
+c. use svg (vector based - scale idefinately) icons or icon fonts . Don't use bitmap img formats (jpg or png) {as when scaled , becomes blur}.
+
+d. Adjust to website personality! Roundness ,wt and filled/outlined depend on typography.
+
+when to use icons :
+
+e. to provide visual assistance to text.
+
+f. for product feature blocks.(with icons user can understand without even reading text)
+
+g. associated with actions and label them (like - Home , Notification) {unless no space or icon is 100% clear}
+
+h. as bullet points(like tick-cross).
+
+Use icons well:
+
+i. To keep icons neutral, use same color as text.To draw more attention , use different colors.
+
+j. Don't confuse ur users ; icons need to make sense and fit the text or action!
+
+k. dont make icons larger than what they were designed for . If needed,enclose in a shape.
+
+9. Use shadows well : add depth
+
+a. You dont have to use shadows! only use them if it makes sense for website personality(less-serious/elegent , more-playful/fun).
+
+b. Use shadows in small doses: don't add shadows to every element.
+
+c. go light on shadows , dont make them too dark. 
+
+use shadows in right situation:
+
+d. use small shadows for smaller elts that should stand out(draw attention)
+
+e. use med-sized shadows for larger areas that should stand out a bit more.(like - cart).
+
+f. use large-sized shadows for elts that should really float above the interface.
+
+g. experiment changing shadowes on click(small) or hover(med).
+
+h. bonus : experiment with glowes (colored shadows) {makes it look like shining). 
+
+10. Use Border radius well :
+
+a. it icrease the playfulness and fun of the design , to make it less serious.
+
+b. Type faces have a certain roundness : make sure that border radiys matches the roundness.
+
+c. use border radius on buttons ,images , icons , stamdout sections and other elts.
+
+11. why whitespace :
+ 
+a. right amt of whitespace makes design look modern ,clean and polished.
+
+b. communicates how diff pieces of info related to one another.
+
+c. implies invisible relationship b/w the elts of layout.
+
+where to use whitespace :
+
+a. use tons b/w sections.
+
+b. b/w grp of elts.
+
+c. b/w elts.
+
+d. inside grp of elts try to use whitesoace instead of lines.
+
+how much white space:
+
+e. the more some elts(or grps of elts) belong together, the closer they should be! {Law of proximity}.
+
+f. Start with lot of whitespace , maybe too much! then remove whitespace from there.
+
+g. match other design choices. if u have big text or icons , u need more whitespace.
+
+h. try hard rule, such as multiples of 16 px for all spacing {2,4,8,12,16,24,32,48,64,80,96,128}.
+
+12. Visual heirarchy {establishing which elts are most imp ones , drawing attention to these imp elts , defining a path for users to guide them through page}
+--> aciheved by position , size , colors , spacing , borders and shadows.
+
+Fundamentals :
+
+a. position imp elts closer to top of page , where they get more attention { attention goes from top to bottom }.
+
+b. use imgs mindfully as they draw lot of attention (larger imgs gets more attention).
+
+c. whitespce creates seprations, so use it strategically to emphasize elts.
+
+For text elts :
+
+d. use fontsize , weight, color , and whitespace to convey importance.(lighten the color for less imp)
+
+e. what text to emphasize --> title , sub-titles ,links, buttons, data pts,icons.{also de-emphasize less imp}.
+
+B/w Components (grps of elts or big data)
+
+f. Emphasize an imp using bg color , shadow or border(or multiple).
+
+g. try emphasizing A over  B by de-emphasizing B.
+
+h. what components to emphasize --> testinomials, call to actions sections(like sign up),highlight sections,preview cards , forms , pricing tables , imp rows /cols in tables, etc.
+
+UX ( user experience ):
+--> visual presentation of product(how it looks) ; layout, personality, typography, colors, icons, etc.
+
+UI And UX Design :
+
+UI-->Graphical interface, ui design makes an interface beautiful.
+UX-->Experience with interface, ux design is what makes an interface useful and functional.
+
+ux designing principle  : Goals
+> a websiite exist for a reason: a user has goal for visiting it, and a business has goal for creating it.
+> goal of ux is fullfill both requirements.
+
+UX rules for usability:
+
+a. dont design complicated layouts.Dont re invent the wheel. Use patterns that user know.
+
+b. make ur call to action the most prominent elt and make text descriptive.
+
+c. use blue text and underlined text only for links.
+
+d. animations should have a purpose and be fast: b/w 200 and 500 ms.
+
+e. in forms ,align labels and fields in a single vertical line to make form easier to scan.
+
+f. offer user good feedback for all actions: form errors , form success,etc.
+
+g. place action buttons where they will create effect (law of locality).
+
+UX rules for website content :
+
+a. use discriptive , keyword-focused headline on main page. Dont be vagye or fancy!(should conveys what the website  is all abt).
+
+b. only include revelent info ,efficiently! Cut out fluff and make the content 100% clear.
+
+c. use simple words! avoid technical jargon and "smart-sounding" words. 
+
+d. for long text , break it with sub-headings,imgs , block quotes,bullet pts, etc.
+
+
+Website Personalities :
+
+1. Serious/elegant
+2. Minimalist/simple
+3. plain/neutral
+4. bold/confident
+5. calm/peaceful
+6. startup/upbeat
+7. playful/fun
+
+
+How to choose-->
+
+decide the vibe --> choose one of the personalities accordingly --> apply personality traits to each design ingredient,i.e,
+(typography, colors, imgs, icons, shadows, border-radius, layout)
+
+

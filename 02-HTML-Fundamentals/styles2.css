@@ -1,0 +1,131 @@
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  padding-top:50px;
+}
+.floating{
+  position: absolute;
+  top:-20px;
+  left:-30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: orangered;
+  color:white;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  font-size:20px;
+  padding:5px 20px; 
+  font-family: monospace;
+}
+h2{
+  text-align:center;
+  background-color: #f7f7f7;
+  text-transform:uppercase ;
+  padding:10px;
+}
+.large{
+  font-size:24px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.light-colored{
+  color: #777;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+}
+a{
+  display: block;
+}
+a:link{
+  color:black;
+}
+a:visited{
+  color:black;
+}
+a:hover{
+  text-decoration: none;
+}
+
+a:active{
+  color:black;
+}
+button{
+  font-size:20px;
+  background-color: black;
+  color:white;
+  padding:0px;
+  border-top:5px solid black;
+  text-transform: uppercase;
+  cursor:pointer;
+  padding:15px;
+  width:825px;
+
+}
+button:hover{
+  background-color: rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
+}
+ul{
+  list-style: square;
+  margin-left:20px;
+}
+li{
+  margin-bottom:5px;
+}
+li:last-child{
+  margin-bottom:8px;
+}
+.container{
+  
+  border:5px solid black;
+  font-family: sans-serif;
+  line-height:1.4;
+  width:825px;
+  margin:0 auto;
+  position: relative;
+}
+.upper{
+  margin-top:15px;
+  margin-bottom:5px;
+}
+h3{
+  margin-top:20px;
+  margin-bottom:10px;
+}
+.Black,.Blue,.Yellow,.Green,.Red,.Brown{
+  display:inline-block;
+}
+.Black{
+  background-color: black;
+  padding: 0px 7px;
+  margin-right:6px;
+}
+.Blue{
+  background-color: blue;
+  padding: 0px 7px;
+  margin-right:6px;
+}
+.Red{
+  background-color: Red;
+  padding: 0px 7px;
+  margin-right:6px;
+}
+.Yellow{
+  background-color: Yellow;
+  padding: 0px 7px;
+  margin-right:6px;
+}
+.Green{
+  background-color: green;
+  padding: 0px 7px;
+  margin-right:6px;
+}
+.Brown{
+  background-color: brown;
+  padding: 0px 7px;
+  margin-right:6px;
+}

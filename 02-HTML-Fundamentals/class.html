@@ -1,0 +1,49 @@
+<html>
+<head><title>Chitkara</title>
+<script>
+
+var eng,gk,math,java,sci;
+var total,avg;
+eng=parseInt(prompt("Enter English Marks"));
+gk=parseInt(prompt("Enter GK Marks"));
+math=parseInt(prompt("Enter MATH Marks"));
+java=parseInt(prompt("Enter JAVA Marks"));
+sci=parseInt(prompt("Enter SCI Marks"));
+total=eng+math+gk+java+sci;
+avg=total/5;
+document.write("<br>TOTAL MARKS="+total);
+document.write("<br>TOTAL AVG MARKS="+avg+"<br>");
+
+
+if(avg<33)
+{
+document.write("YOU GOT E GRADE");
+}
+else if(avg>=33 && avg<40)
+{
+document.write("YOU GOT D GRADE");
+}
+else if(avg>=40 && avg<60)
+{
+document.write("YOU GOT C GRADE");
+}
+else if(avg>=60 && avg<70)
+{
+document.write("YOU GOT B GRADE");
+}
+else if(avg>=70 && avg<80)
+{
+document.write("YOU GOT A GRADE");
+}
+else
+{
+document.write("YOU GOT A++ GRADE");
+}
+
+</script>
+
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{font-size: 20px;margin-top: 10px;}
+    </style>
+    <script>
+        function valid()
+        {
+           var uname= document.getElementById("uname");
+           if(uname.value=="")
+           {
+            alert("Please Enter User Name");
+            document.getElementById("uname").style.border='2px red solid';
+            document.getElementById("uname_err").style.visibility='visible'
+            return false;
+           }
+           else{
+            alert("Sucesfully Submit");
+            
+           }
+        }
+    </script>
+</head>
+<body>
+   <form action="" onsubmit="return valid();">
+    <input type="text" id="uname" placeholder="Enter User Name">
+    <br>
+    <span id="uname_err" style="color: red;visibility: hidden;">Please Enter User Name</span>
+    <br>
+    <input type="text" id="pass" placeholder="Enter Password">
+    <br>
+    <input type="text" id="cpass" placeholder="Enter Confirm  Password">
+    <br>
+    <input type="submit">
+    
+   </form> 
+</body>
+</html>
