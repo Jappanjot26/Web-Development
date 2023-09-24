@@ -205,6 +205,7 @@ if (friends.includes("Peter")) {
 
 */
 
+/*
 //--------------- Objects(dictionary) ------------------
 
 //Declaration (Object Literal syntax)
@@ -216,3 +217,195 @@ const jonas = {
   job: "teacher",
   friends: ["Michael", "Bob", "Alice"],
 };
+
+//Retreiving Value
+console.log(jonas);
+
+//Dot notation
+console.log(jonas.lastName);
+//Bracket Notation
+console.log(jonas["lastName"]);
+
+const nameKey = "Name";
+console.log(jonas["first" + nameKey]);
+console.log(jonas["last" + nameKey]);
+
+// console.log(jonas.'last'+namekey); //willnot work here
+
+
+//Exercise 1
+
+const interestedIn = prompt(
+  "What do you want to know about Jonas? Choose between firstName , lastName , age, job, and friends "
+);
+console.log(jonas.interestedIn); //Not works
+console.log(jonas[interestedIn]); //bracket notation works
+
+if (jonas[interestedIn]) {
+  //if it exists
+  console.log(jonas[interestedIn]);
+} else {
+  console.log(
+    "Wrong request! Choose between firstName , lastName , age, job, and friends"
+  );
+}
+
+
+//Add elements
+jonas.location = "Portugal";
+jonas["twitter"] = "@jonasschmedtman";
+console.log(jonas);
+
+//Exercise 2
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+);
+
+*/
+
+/*
+//-------------- Exploring Objects --------------
+
+//Functions in objects
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  birthYear: 1991,
+  job: "teacher",
+  friends: ["Michael", "Bob", "Alice"],
+  hasDriversLicense: true,
+  //Any function attached to object is called method
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // },
+
+  //this --> uses value of same object
+  // calcAge: function () {
+  //   return 2037 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  //challenge
+  calcSummary: function () {
+    this.summary = `${this.firstName} is a ${this.calcAge()}-year old ${
+      this.job
+    }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license`;
+    return this.summary;
+  },
+};
+
+
+//Calling of methods
+
+//Method 1
+console.log(jonas.calcAge(1991));
+//Method 2
+console.log(jonas["calcAge"](1991));
+
+console.log(jonas.calcAge());
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.age);
+console.log(jonas.calcSummary());
+console.log(jonas.summary);
+
+*/
+
+//Arrays are also objects but we uses inbuilt methods to matipulate it
+
+/*
+
+//---------------- lOOPS ----------------
+
+//for loop keeps runnig while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Repetition ${rep}`);
+}
+
+// Array operations using loops
+const jonas = [
+  "Jonas",
+  "Schmedtmann",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Bob", "Alice"],
+  true,
+];
+
+const types = [];
+
+for (let i = 0; i < jonas.length; i++) {
+  console.log(jonas[i], typeof jonas[i]);
+  //filling types array
+  // types[i] = typeof jonas[i];
+  types.push(typeof jonas[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+//Break and continue statements
+//continue --> exit current iteration and starts next
+//break --> exits the loop
+
+//Continue when not string
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] != "string") continue;
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+//Break when number found
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] === "number") break;
+  console.log(jonas[i], typeof jonas[i]);
+}
+
+
+
+//Looping Backwards
+const jonas = [
+  "Jonas",
+  "Schmedtmann",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Bob", "Alice"],
+];
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+  console.log(i, jonas[i]);
+}
+
+//Loop inside loop
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-------------Starting exercise ${exercise}`);
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise} Lifting weight repetition ${rep}`);
+  }
+}
+
+*/
+
+//While Loop
+let rep = 1;
+while (rep <= 10) {
+  console.log(`repitition = ${rep}`);
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log("Loop is about to end...");
+}

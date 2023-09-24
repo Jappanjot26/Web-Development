@@ -251,7 +251,7 @@ switch (day) {
 }
 */
 //-------------------------------------------------------
-
+/*
 const age = 15;
 //ternary operator
 age >= 18
@@ -266,17 +266,18 @@ age >= 18
 // }
 
 console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
+*/
 
 //-------------------------------------------------------
 //
 //
 //
-/*
+
 //  Assignment - Value and variables
 // let country = "India";
 // let continent = "Asia";
-let population = 1300;
-console.log(country, continent, population);
+let population = 1300000000;
+// console.log(country, continent, population);
 
 // Assignment: Data Types
 let isIsland = false;
@@ -291,4 +292,46 @@ language = "punjabi";
 const country = "India";
 const continent = "Asia";
 // country = "America"; //error cant change value of constant
-*/
+
+//Assignment : Basic Operations
+let half_population = population / 2;
+console.log(population + 1);
+
+let population_finland = 6000000;
+console.log(population > population_finland);
+
+let avgPopulation = 33000000;
+console.log(avgPopulation > population);
+
+let description =
+  country +
+  " is in " +
+  continent +
+  ", and its " +
+  population / 1000000 +
+  " million people speak " +
+  language;
+console.log(description);
+
+//Assignment : Strings annd Template Literals
+description = `${country} is in ${continent}, and its ${
+  population / 1000000
+} million people speak ${language}`;
+console.log(description);
+
+//Assignment : if/else
+if (population > 33000000)
+  console.log(`${country}'s population is above average`);
+else
+  console.log(
+    `${country}'s population is ${
+      33 - population / 1000000
+    } million below average`
+  );
+
+//Assignment : Type Conversion and Coercion
+console.log("9" - "5"); //4
+console.log("19" - "13" + "17"); //617
+console.log("19" - "13" + 17); //23
+console.log("123" < 57); //false
+console.log(5 + 6 + "4" + 9 - 4 - 2); //1143
