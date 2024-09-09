@@ -31,7 +31,10 @@ const renderCountry = function (data, className = '') {
   `;
 
   countriesContainer.insertAdjacentHTML('beforeend', html);
-  countriesContainer.style.opacity = 1;
+};
+
+const renderError = function (msg) {
+  countriesContainer.insertAdjacentText('beforeend', msg);
 };
 
 // const getCountryData = country => {
@@ -100,7 +103,17 @@ const getCountryAndNeighbour = function (country) {
       // then whats the benefit of using promises.
     })
     .then(response => response.json())
-    .then(([data]) => renderCountry(data, 'neighbour'));
+    .then(([data]) => renderCountry(data, 'neighbour'))
+    // Error goes to end until caught
+    .catch(err => renderError('Went Wrong!!!'))
+    .finally(() => {
+      // no matter what, this is always called
+      countriesContainer.style.opacity = 1;
+    });
 };
+
+btn.addEventListener('click', () => {
+  getCountryAndNeighbour('india');
+});
 
 getCountryAndNeighbour('india');
