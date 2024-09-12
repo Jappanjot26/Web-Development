@@ -292,6 +292,110 @@ const whereAmI = function (lat, lng) {
     });
 };
 
-whereAmI(52.508, 13.381);
-whereAmI(19.037, 72.873);
-whereAmI(-33.933, 18.474);
+// whereAmI(52.508, 13.381);
+// whereAmI(19.037, 72.873);
+// whereAmI(-33.933, 18.474);
+
+/*
+
+// Testing Event Loops
+
+console.log('Test Start!');
+// this test shows that we can't do high precision tasks with js timers
+// as it could me more than time mentioned due to promises in microtasks 
+// queue.
+setTimeout(() => {
+  console.log('0 sec timer');
+}, 0);
+
+Promise.resolve('Resolved Promise 1').then(res => console.log(res));
+Promise.resolve('Resolved Promise 2').then(res => {
+  for (let i = 0; i < 1000000000; i++);
+  console.log(res);
+});
+
+console.log('Test End!');
+*/
+
+/*
+// Creating a basic promise
+const lotteryPromise = new Promise(function (resolve, reject) {
+  console.log('Lottery Draw Happening ...');
+
+  setTimeout(() => {
+    if (Math.random() >= 0.5) {
+      resolve('You WON!');
+    } else {
+      reject(new Error('Yoo Lost!'));
+    }
+  }, 2000);
+});
+
+lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
+
+// Promisifying setTimeout
+const wait = function (seconds) {
+  return new Promise(resolve => {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+
+wait(4).then(() => console.log('I waited for 4 seconds!'));
+
+// making timer using wait() without entering in call back hell;
+
+wait(1)
+  .then(() => {
+    console.log('1 second passed!');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('2 second passed!');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('3 second passed!');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('4 second passed!');
+    return wait(1);
+  });
+
+// for immediate access to resolved or rejected state of promise
+Promise.resolve('DONE!').then(x => console.log(x));
+Promise.reject('Problem!').catch(x => console.error(x));
+*/
+
+/*
+navigator.geolocation.getCurrentPosition(
+  position => console.log(position),
+  err => console.error(err)
+);
+
+// making it to a promise
+const getPosition = () => {
+  return new Promise((resolve, reject) => {
+    // navigator.geolocation.getCurrentPosition(
+    //   position => console.log(position),
+    //   err => console.error(err)
+    // );
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+getPosition()
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+
+const whereAmIAuto = () => {
+  getPosition()
+    .then(res => {
+      const { latitude, longitude } = res.coords;
+      return Promise.resolve([latitude, longitude]);
+    })
+    .then(([lat, lng]) => whereAmI(lat, lng));
+};
+whereAmIAuto();
+
+*/
