@@ -367,7 +367,7 @@ Promise.resolve('DONE!').then(x => console.log(x));
 Promise.reject('Problem!').catch(x => console.error(x));
 */
 
-/*
+
 navigator.geolocation.getCurrentPosition(
   position => console.log(position),
   err => console.error(err)
@@ -398,4 +398,3 @@ const whereAmIAuto = () => {
 };
 whereAmIAuto();
 
-*/
