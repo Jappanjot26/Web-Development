@@ -384,17 +384,17 @@ const getPosition = () => {
   });
 };
 
-getPosition()
-  .then(res => console.log(res))
-  .catch(err => console.error(err));
+// getPosition()
+//   .then(res => console.log(res))
+//   .catch(err => console.error(err));
 
-const whereAmIAuto = () => {
-  getPosition()
-    .then(res => {
-      const { latitude, longitude } = res.coords;
-      return Promise.resolve([latitude, longitude]);
-    })
-    .then(([lat, lng]) => whereAmI(lat, lng));
-};
-whereAmIAuto();
+// const whereAmIAuto = () => {
+//   getPosition()
+//     .then(res => {
+//       const { latitude, longitude } = res.coords;
+//       return Promise.resolve([latitude, longitude]);
+//     })
+//     .then(([lat, lng]) => whereAmI(lat, lng));
+// };
+// whereAmIAuto();
 
