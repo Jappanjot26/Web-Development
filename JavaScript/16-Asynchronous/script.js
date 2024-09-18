@@ -165,32 +165,32 @@ TEST COORDINATES 2: -33.933, 18.474
 GOOD LUCK 😀
 */
 
-const renderCountry = function (data, className = '') {
-  const html = `
-  <article class="country ${className}">
-          <img class="country__img" src="${data.flags.svg}" />
-          <div class="country__data">
-            <h3 class="country__name">${data.name.common}</h3>
-            <h4 class="country__region">${data.region}</h4>
-            <p class="country__row"><span>👫</span>${(
-              +data.population / 1000000
-            ).toFixed(1)} M</p>
-            <p class="country__row"><span>🗣️</span>${
-              data.languages[`${Object.keys(data.languages)[0]}`]
-            }</p>
-            <p class="country__row"><span>💰</span>${
-              data.currencies[Object.keys(data.currencies)[0]].name
-            }</p>
-          </div>
-  </article>
-  `;
+// const renderCountry = function (data, className = '') {
+//   const html = `
+//   <article class="country ${className}">
+//           <img class="country__img" src="${data.flags.svg}" />
+//           <div class="country__data">
+//             <h3 class="country__name">${data.name.common}</h3>
+//             <h4 class="country__region">${data.region}</h4>
+//             <p class="country__row"><span>👫</span>${(
+//               +data.population / 1000000
+//             ).toFixed(1)} M</p>
+//             <p class="country__row"><span>🗣️</span>${
+//               data.languages[`${Object.keys(data.languages)[0]}`]
+//             }</p>
+//             <p class="country__row"><span>💰</span>${
+//               data.currencies[Object.keys(data.currencies)[0]].name
+//             }</p>
+//           </div>
+//   </article>
+//   `;
 
-  countriesContainer.insertAdjacentHTML('beforeend', html);
-};
+//   countriesContainer.insertAdjacentHTML('beforeend', html);
+// };
 
-const renderError = function (msg) {
-  countriesContainer.insertAdjacentText('beforeend', msg);
-};
+// const renderError = function (msg) {
+//   countriesContainer.insertAdjacentText('beforeend', msg);
+// };
 
 // const getCountryData = country => {
 //   const request = new XMLHttpRequest();
@@ -241,6 +241,33 @@ const renderError = function (msg) {
 //     .then(response => response.json())
 //     .then(([data]) => renderCountry(data));
 // };
+
+const renderCountry = function (data, className = '') {
+  const html = `
+  <article class="country ${className}">
+          <img class="country__img" src="${data.flags.svg}" />
+          <div class="country__data">
+            <h3 class="country__name">${data.name.common}</h3>
+            <h4 class="country__region">${data.region}</h4>
+            <p class="country__row"><span>👫</span>${(
+              +data.population / 1000000
+            ).toFixed(1)} M</p>
+            <p class="country__row"><span>🗣️</span>${
+              data.languages[`${Object.keys(data.languages)[0]}`]
+            }</p>
+            <p class="country__row"><span>💰</span>${
+              data.currencies[Object.keys(data.currencies)[0]].name
+            }</p>
+          </div>
+  </article>
+  `;
+
+  countriesContainer.insertAdjacentHTML('beforeend', html);
+};
+
+const renderError = function (msg) {
+  countriesContainer.insertAdjacentText('beforeend', msg);
+};
 
 const getJSON = function (url, errorMsg = 'Something went wrong!') {
   return fetch(url).then(res => {
@@ -367,7 +394,6 @@ Promise.resolve('DONE!').then(x => console.log(x));
 Promise.reject('Problem!').catch(x => console.error(x));
 */
 
-
 navigator.geolocation.getCurrentPosition(
   position => console.log(position),
   err => console.error(err)
@@ -397,4 +423,3 @@ const getPosition = () => {
 //     .then(([lat, lng]) => whereAmI(lat, lng));
 // };
 // whereAmIAuto();
-
