@@ -27,7 +27,6 @@ body {
 }
 
 .countries {
-  /* margin-bottom: 8rem; */
   display: flex;
 
   font-size: 2rem;
@@ -42,7 +41,6 @@ body {
   width: 30rem;
   border-radius: 0.7rem;
   margin: 0 3rem;
-  /* overflow: hidden; */
 }
 
 .neighbour::before {

@@ -283,6 +283,7 @@ const getCountryAndNeighbour = function (country) {
   )
     .then(([data]) => {
       renderCountry(data);
+      // const neighbour = data.borders?.[0];
       const neighbour = data.borders?.[0];
 
       return getJSON(
@@ -324,7 +325,8 @@ const whereAmI = function (lat, lng) {
 // whereAmI(-33.933, 18.474);
 
 /*
-
+//
+//
 // Testing Event Loops
 
 console.log('Test Start!');
