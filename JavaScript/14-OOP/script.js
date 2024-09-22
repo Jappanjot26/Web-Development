@@ -417,7 +417,7 @@ martha.introduce();
 martha.calcAge();
 */
 
-/*
+
 ////////////////////////////////////////////////////
 // INHERITANCE B/w "Classes" : Object.create()
 
@@ -448,7 +448,7 @@ const jay = Object.create(StudentProto);
 jay.init('Jay', '2010', 'CSE');
 jay.introduce();
 jay.calcAge();
-*/
+
 
 ////////////////////////////////////////////
 // CLASS Fields & Methods
