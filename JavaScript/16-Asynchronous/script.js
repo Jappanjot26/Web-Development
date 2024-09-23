@@ -241,7 +241,7 @@ GOOD LUCK 😀
 //     .then(response => response.json())
 //     .then(([data]) => renderCountry(data));
 // };
-
+/*
 const renderCountry = function (data, className = '') {
   const html = `
   <article class="country ${className}">
@@ -264,6 +264,7 @@ const renderCountry = function (data, className = '') {
 
   countriesContainer.insertAdjacentHTML('beforeend', html);
 };
+*/
 
 const renderError = function (msg) {
   countriesContainer.insertAdjacentText('beforeend', msg);
@@ -309,6 +310,8 @@ const getCountryAndNeighbour = function (country) {
 
 const getURL = (lat, lng) =>
   `https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${lng}&apiKey=c6a002300b10464099b69a2b92f4eabe`;
+
+/*
 const whereAmI = function (lat, lng) {
   fetch(getURL(lat, lng))
     .then(res => res.json())
@@ -319,6 +322,7 @@ const whereAmI = function (lat, lng) {
       getCountryAndNeighbour(country);
     });
 };
+*/
 
 // whereAmI(52.508, 13.381);
 // whereAmI(19.037, 72.873);
@@ -396,10 +400,10 @@ Promise.resolve('DONE!').then(x => console.log(x));
 Promise.reject('Problem!').catch(x => console.error(x));
 */
 
-navigator.geolocation.getCurrentPosition(
-  position => console.log(position),
-  err => console.error(err)
-);
+// navigator.geolocation.getCurrentPosition(
+//   position => console.log(position),
+//   err => console.error(err)
+// );
 
 // making it to a promise
 const getPosition = () => {
@@ -425,3 +429,142 @@ const getPosition = () => {
 //     .then(([lat, lng]) => whereAmI(lat, lng));
 // };
 // whereAmIAuto();
+
+///////////////////////////////////////
+// Coding Challenge #2
+
+/* 
+Build the image loading functionality that I just showed you on the screen.
+
+Tasks are not super-descriptive this time, so that you can figure out some stuff on your own. Pretend you're working on your own 😉
+
+PART 1
+1. Create a function 'createImage' which receives imgPath as an input. This function returns a promise which creates a new image (use document.createElement('img')) and sets the .src attribute to the provided image path. When the image is done loading, append it to the DOM element with the 'images' class, and resolve the promise. The fulfilled value should be the image element itself. In case there is an error loading the image ('error' event), reject the promise.
+
+If this part is too tricky for you, just watch the first part of the solution.
+
+PART 2
+2. Comsume the promise using .then and also add an error handler;
+3. After the image has loaded, pause execution for 2 seconds using the wait function we created earlier;
+4. After the 2 seconds have passed, hide the current image (set display to 'none'), and load a second image (HINT: Use the image element returned by the createImage promise to hide the current image. You will need a global variable for that 😉);
+5. After the second image has loaded, pause execution for 2 seconds again;
+6. After the 2 seconds have passed, hide the current image.
+
+TEST DATA: Images in the img folder. Test the error handler by passing a wrong image path. Set the network speed to 'Fast 3G' in the dev tools Network tab, otherwise images load too fast.
+
+GOOD LUCK 😀
+*/
+
+/*
+const wait = function (sec) {
+  return new Promise(resolve => setTimeout(resolve, sec * 1000));
+};
+
+const imgContainer = document.querySelector('.images');
+const createImage = function (imgPath) {
+  return new Promise((resolve, reject) => {
+    let img = document.createElement('img');
+    img.src = imgPath;
+    img.addEventListener('load', () => {
+      imgContainer.append(img);
+      resolve(img);
+    });
+
+    img.addEventListener('error', () => {
+      reject(new Error('Image not found!'));
+    });
+  });
+};
+
+let currImg;
+
+createImage('img/img-1.jpg')
+  .then(img => {
+    currImg = img;
+    console.log('Image loaded!');
+    return wait(2);
+  })
+  .then(() => {
+    currImg.style.display = 'none';
+    return createImage('img/img-2.jpg');
+  })
+  .then(img => {
+    currImg = img;
+    console.log('Image loaded!');
+    return wait(2);
+  })
+  .then(() => {
+    currImg.style.display = 'none';
+  })
+  .catch(err => console.error(err));
+*/
+
+/*
+const renderCountry = function (data, className = '') {
+  const html = `
+  <article class="country ${className}">
+          <img class="country__img" src="${data.flags.svg}" />
+          <div class="country__data">
+            <h3 class="country__name">${data.name.common}</h3>
+            <h4 class="country__region">${data.region}</h4>
+            <p class="country__row"><span>👫</span>${(
+              +data.population / 1000000
+            ).toFixed(1)} M</p>
+            <p class="country__row"><span>🗣️</span>${
+              data.languages[`${Object.keys(data.languages)[0]}`]
+            }</p>
+            <p class="country__row"><span>💰</span>${
+              data.currencies[Object.keys(data.currencies)[0]].name
+            }</p>
+          </div>
+  </article>
+  `;
+
+  countriesContainer.insertAdjacentHTML('beforeend', html);
+};
+
+const whereAmI = async function () {
+  try {
+    // geo location
+    const pos = await getPosition();
+    const { latitude: lat, longitude: lng } = pos.coords;
+
+    const resGeo = await fetch(getURL(lat, lng));
+    if (!resGeo.ok) throw new Error('Problem getting Location data');
+    const dataGeo = await resGeo.json();
+    const country = dataGeo.features[0].properties.country;
+
+    // fetch(`https://restcountries.com/v3.1/name/${country}`).then(res => console.log(res));
+
+    const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+    if (!res.ok) throw new Error('Problem getting Country data');
+    const data = await res.json();
+    renderCountry(data[0]);
+
+    return `You are in ${country}`;
+  } catch (err) {
+    renderError(`Something went wrong! ${err.message}`);
+    throw err;
+  }
+};
+
+console.log('Loading...');
+// whereAmI()
+//   .then(res => console.log(res))
+//   .catch(err => console.error(err))
+//   .finally(() => {
+//     console.log('Finished...');
+//   });
+
+// using iffe
+
+(async function () {
+  try {
+    const country = await whereAmI();
+    console.log(country);
+  } catch (err) {
+    console.error(err);
+  }
+  console.log('Finished...');
+})();
+*/
