@@ -215,6 +215,8 @@ function getTotalReviewCount(book) {
 console.log(getTotalReviewCount(book));
 */
 
+/*
+
 // Array map method
 
 const books = getBooks();
@@ -266,3 +268,46 @@ arr2;
 // sorting by no. of pages
 const sortNoOfPages = books.slice().sort((a, b) => a.pages - b.pages);
 sortNoOfPages;
+
+// Working with immutable arrays
+
+// 1) Add object to array
+const newBook = {
+  id: 6,
+  title: "Harry Potter and the chambers of secret",
+  author: "JK Rowling",
+};
+
+const bookAfterAdd = [...books, newBook];
+bookAfterAdd;
+
+// 2) delete book object from array
+const booksAfterDel = bookAfterAdd.filter((book) => book.id !== 3);
+booksAfterDel;
+
+// 3) Update book object in array
+const bookAfterUpdate = booksAfterDel.map((book) =>
+  book.id == 1 ? { ...book, pages: 1210 } : book
+);
+bookAfterUpdate;
+
+*/
+
+// Asynchronous JavaScript
+
+// Promises
+
+// fetching data
+// fetch("https://jsonplaceholder.typicode.com/todos")
+//   .then((res) => res.json())
+//   .then((data) => console.log(data));
+
+// Easily handling the same
+async function getTodos() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await res.json();
+  console.log(data);
+}
+
+getTodos();
+console.log("Logging");
