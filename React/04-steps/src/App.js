@@ -8,6 +8,7 @@ const messages = [
 
 export default function App() {
   const [step, setStep] = useState(1);
+  const style = { backgroundColor: "#7950f2", color: "#fff" };
 
   function handlePrevious() {
     setStep(step > 1 ? step - 1 : step);
@@ -26,16 +27,10 @@ export default function App() {
         Step {step}: {messages[step - 1]}
       </div>
       <div className="buttons">
-        <button
-          style={{ backgroundColor: "#7950f2", color: "#fff" }}
-          onClick={handlePrevious}
-        >
+        <button style={style} onClick={handlePrevious}>
           Previous
         </button>
-        <button
-          style={{ backgroundColor: "#7950f2", color: "#fff" }}
-          onClick={handleNext}
-        >
+        <button style={style} onClick={handleNext}>
           Next
         </button>
       </div>
