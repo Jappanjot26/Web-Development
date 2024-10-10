@@ -2,6 +2,19 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+
+.steps {
+  width: 600px;
+  background-color: #f7f7f7;
+  border-radius: 7px;
+  padding: 25px 100px;
+  margin: 100px auto;
+}
+
 .numbers {
   display: flex;
   justify-content: space-between;
@@ -16,18 +29,6 @@
   align-items: center;
   justify-content: center;
   font-size: 18px;
-}
-body {
-  font-family: sans-serif;
-  color: #333;
-}
-
-.steps {
-  width: 600px;
-  background-color: #f7f7f7;
-  border-radius: 7px;
-  padding: 25px 100px;
-  margin: 100px auto;
 }
 
 .numbers .active {
