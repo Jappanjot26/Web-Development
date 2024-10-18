@@ -41,6 +41,57 @@ const questions = [
       "What do we call an input element that is completely synchronised with state?",
     answer: "Controlled element",
   },
+  {
+    id: 5632,
+    question: "What lifecycle method is called after a component is mounted?",
+    answer: "componentDidMount",
+  },
+  {
+    id: 8741,
+    question: "What is the purpose of the useEffect hook?",
+    answer: "To perform side effects in function components",
+  },
+  {
+    id: 6542,
+    question: "What are the two main types of components in React?",
+    answer: "Class components and functional components",
+  },
+  {
+    id: 9814,
+    question: "What is the context API used for in React?",
+    answer: "To manage global state and avoid prop drilling",
+  },
+  {
+    id: 7321,
+    question: "How can you optimize performance in a React app?",
+    answer: "Using React.memo and useCallback",
+  },
+  {
+    id: 8456,
+    question: "What do we use to handle form submissions in React?",
+    answer: "Event handlers",
+  },
+  {
+    id: 3201,
+    question: "What is the purpose of keys in React lists?",
+    answer: "To uniquely identify elements for efficient re-rendering",
+  },
+  {
+    id: 4178,
+    question:
+      "What hook would you use to manage side effects in a functional component?",
+    answer: "useEffect",
+  },
+  {
+    id: 2564,
+    question: "What is a higher-order component (HOC)?",
+    answer: "A function that takes a component and returns a new component",
+  },
+  {
+    id: 4920,
+    question: "What does the useReducer hook do?",
+    answer: "Manages complex state logic in functional components",
+  },
 ];
 
 function FlashCards() {
