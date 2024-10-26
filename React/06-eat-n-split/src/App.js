@@ -42,13 +42,6 @@ export default function App() {
     setFriends((friends) => [...friends, friend]);
     setShowAddFriend(false);
   }
-  function handleSelection(friend) {
-    // setSelectedFriend(friend);
-    setSelectedFriend((selected) =>
-      selected?.id === friend.id ? null : friend
-    );
-    setShowAddFriend(false);
-  }
   function handleSplitBill(val) {
     setFriends((fl) =>
       fl.map((f) =>
@@ -58,6 +51,14 @@ export default function App() {
 
     setSelectedFriend(null);
   }
+  function handleSelection(friend) {
+    // setSelectedFriend(friend);
+    setSelectedFriend((selected) =>
+      selected?.id === friend.id ? null : friend
+    );
+    setShowAddFriend(false);
+  }
+
   return (
     <div className="app">
       <div className="sidebar">
