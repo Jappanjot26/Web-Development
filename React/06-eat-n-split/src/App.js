@@ -42,7 +42,7 @@ export default function App() {
     setFriends((friends) => [...friends, friend]);
     setShowAddFriend(false);
   }
-  function handleSplitBill(val) {
+cvbnm,./"[poiuytrewqazxcvbhfew2q1`1478/*9  function handleSplitBill(val) {
     setFriends((fl) =>
       fl.map((f) =>
         f.id === selectedFriend.id ? { ...f, balance: f.balance + val } : f
