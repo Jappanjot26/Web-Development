@@ -42,7 +42,7 @@ export default function App() {
     setFriends((friends) => [...friends, friend]);
     setShowAddFriend(false);
   }
-cvbnm,./"[poiuytrewqazxcvbhfew2q1`1478/*9  function handleSplitBill(val) {
+  function handleSplitBill(val) {
     setFriends((fl) =>
       fl.map((f) =>
         f.id === selectedFriend.id ? { ...f, balance: f.balance + val } : f
@@ -76,6 +76,7 @@ cvbnm,./"[poiuytrewqazxcvbhfew2q1`1478/*9  function handleSplitBill(val) {
         <FormSplitBill
           selectedFriend={selectedFriend}
           onSplitBill={handleSplitBill}
+          key={selectedFriend.id}
         />
       )}
     </div>
@@ -167,6 +168,8 @@ function FormSplitBill({ selectedFriend, onSplitBill }) {
       <Button>Split Bill</Button>
     </form>
   );
+}
+
 function FormAddFriend({ onAddFriend }) {
   const [name, setName] = useState("");
   const [image, setImage] = useState("https://i.pravatar.cc/48");
@@ -204,5 +207,3 @@ function FormAddFriend({ onAddFriend }) {
     </form>
   );
 }
-
-
