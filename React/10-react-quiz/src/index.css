@@ -257,3 +257,10 @@ progress {
   font-size: inherit;
   padding: 0.8rem;
 }
+
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
